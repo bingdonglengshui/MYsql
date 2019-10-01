@@ -74,8 +74,8 @@ private:
 	void DestoryAll();
 public:
 	//封装数据库的操作
-	ResultSet *executeQuery(string str);
-	bool execute(string str);
+	ResultSet *executeQuery(const string& str);
+	bool execute(const string& str);
 };
 
 #endif /* DATABASE_H_ */

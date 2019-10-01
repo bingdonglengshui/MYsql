@@ -134,7 +134,7 @@ void DataBase::DestoryAll() {
 	temp2.clear();
 
 }
-ResultSet *DataBase::executeQuery(string str) {
+ResultSet *DataBase::executeQuery(const string& str) {
 	try {
 		shared_ptr < Connection> conn(Get(), [this](Connection* ptr) {Release(ptr);});
 		shared_ptr<Statement*> stmt = make_shared<Statement*>(conn->createStatement());
@@ -145,7 +145,7 @@ ResultSet *DataBase::executeQuery(string str) {
 		throw runtime_error(os.str());
 	}
 }
-bool  DataBase::execute(string str) {
+bool  DataBase::execute(const string& str) {
 	try {
 			shared_ptr < Connection> conn(Get(), [this](Connection* ptr) {Release(ptr);});
 			shared_ptr<Statement*> stmt = make_shared<Statement*>(conn->createStatement());
