@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/DataBase.dir/src/DataBase.cpp.o CMakeFiles/DataBase.dir/src/main.cpp.o  -o ../bin/DataBase  -L/root/mysql-connector/lib -rdynamic -lmysqlcppconn -Wl,-rpath,/root/mysql-connector/lib 

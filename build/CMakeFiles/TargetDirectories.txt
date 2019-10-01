@@ -1,0 +1,1 @@
+/root/mysql-connector/build/CMakeFiles/DataBase.dir
