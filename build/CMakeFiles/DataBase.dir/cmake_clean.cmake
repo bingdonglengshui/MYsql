@@ -1,5 +1,4 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/DataBase.dir/src/DataBase.cpp.o"
   "CMakeFiles/DataBase.dir/src/main.cpp.o"
   "../bin/DataBase.pdb"
   "../bin/DataBase"

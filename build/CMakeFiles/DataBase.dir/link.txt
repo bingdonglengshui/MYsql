@@ -1,1 +1,1 @@
-/usr/bin/c++       CMakeFiles/DataBase.dir/src/DataBase.cpp.o CMakeFiles/DataBase.dir/src/main.cpp.o  -o ../bin/DataBase  -L/root/mysql-connector/lib -rdynamic -lmysqlcppconn -Wl,-rpath,/root/mysql-connector/lib 
+/usr/bin/c++   -g    CMakeFiles/DataBase.dir/src/main.cpp.o  -o ../bin/DataBase  -L/root/mysql-connector/lib -rdynamic -lmysqlcppconn ../bin/libtest.so.1.2 -Wl,-rpath,/root/mysql-connector/lib:/root/mysql-connector/bin 

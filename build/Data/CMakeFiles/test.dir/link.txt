@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g   -shared -Wl,-soname,libtest.so.1 -o ../../bin/libtest.so.1.2 CMakeFiles/test.dir/DataBase.cpp.o 

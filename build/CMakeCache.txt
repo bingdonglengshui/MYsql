@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Dependencies for target
+._LIB_DEPENDS:STATIC=
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -186,6 +189,9 @@ EXECUTABLE_OUTPUT_PATH:PATH=
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
 
+//Dependencies for target
+test_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries
@@ -279,7 +285,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=1
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

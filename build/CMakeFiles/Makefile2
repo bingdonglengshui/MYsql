@@ -59,10 +59,10 @@ CMAKE_BINARY_DIR = /root/mysql-connector/build
 # Target rules for target CMakeFiles/DataBase.dir
 
 # All Build rule for target.
-CMakeFiles/DataBase.dir/all:
+CMakeFiles/DataBase.dir/all: Data/CMakeFiles/test.dir/all
 	$(MAKE) -f CMakeFiles/DataBase.dir/build.make CMakeFiles/DataBase.dir/depend
 	$(MAKE) -f CMakeFiles/DataBase.dir/build.make CMakeFiles/DataBase.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/mysql-connector/build/CMakeFiles  1 2
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/mysql-connector/build/CMakeFiles  1
 	@echo "Built target DataBase"
 .PHONY : CMakeFiles/DataBase.dir/all
 
@@ -88,6 +88,56 @@ CMakeFiles/DataBase.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/DataBase.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Data
+
+# Convenience name for "all" pass in the directory.
+Data/all: Data/CMakeFiles/test.dir/all
+.PHONY : Data/all
+
+# Convenience name for "clean" pass in the directory.
+Data/clean: Data/CMakeFiles/test.dir/clean
+.PHONY : Data/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Data/preinstall:
+.PHONY : Data/preinstall
+
+#=============================================================================
+# Target rules for target Data/CMakeFiles/test.dir
+
+# All Build rule for target.
+Data/CMakeFiles/test.dir/all:
+	$(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/depend
+	$(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/mysql-connector/build/CMakeFiles  2
+	@echo "Built target test"
+.PHONY : Data/CMakeFiles/test.dir/all
+
+# Include target in all.
+all: Data/CMakeFiles/test.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Data/CMakeFiles/test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/mysql-connector/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 Data/CMakeFiles/test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/mysql-connector/build/CMakeFiles 0
+.PHONY : Data/CMakeFiles/test.dir/rule
+
+# Convenience name for target.
+test: Data/CMakeFiles/test.dir/rule
+.PHONY : test
+
+# clean rule for target.
+Data/CMakeFiles/test.dir/clean:
+	$(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/clean
+.PHONY : Data/CMakeFiles/test.dir/clean
+
+# clean rule for target.
+clean: Data/CMakeFiles/test.dir/clean
 .PHONY : clean
 
 #=============================================================================

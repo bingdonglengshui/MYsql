@@ -1,1 +1,2 @@
 /root/mysql-connector/build/CMakeFiles/DataBase.dir
+/root/mysql-connector/build/Data/CMakeFiles/test.dir

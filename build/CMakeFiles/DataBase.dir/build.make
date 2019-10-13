@@ -52,32 +52,9 @@ include CMakeFiles/DataBase.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DataBase.dir/flags.make
 
-CMakeFiles/DataBase.dir/src/DataBase.cpp.o: CMakeFiles/DataBase.dir/flags.make
-CMakeFiles/DataBase.dir/src/DataBase.cpp.o: ../src/DataBase.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/mysql-connector/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DataBase.dir/src/DataBase.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DataBase.dir/src/DataBase.cpp.o -c /root/mysql-connector/src/DataBase.cpp
-
-CMakeFiles/DataBase.dir/src/DataBase.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DataBase.dir/src/DataBase.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/mysql-connector/src/DataBase.cpp > CMakeFiles/DataBase.dir/src/DataBase.cpp.i
-
-CMakeFiles/DataBase.dir/src/DataBase.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DataBase.dir/src/DataBase.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/mysql-connector/src/DataBase.cpp -o CMakeFiles/DataBase.dir/src/DataBase.cpp.s
-
-CMakeFiles/DataBase.dir/src/DataBase.cpp.o.requires:
-.PHONY : CMakeFiles/DataBase.dir/src/DataBase.cpp.o.requires
-
-CMakeFiles/DataBase.dir/src/DataBase.cpp.o.provides: CMakeFiles/DataBase.dir/src/DataBase.cpp.o.requires
-	$(MAKE) -f CMakeFiles/DataBase.dir/build.make CMakeFiles/DataBase.dir/src/DataBase.cpp.o.provides.build
-.PHONY : CMakeFiles/DataBase.dir/src/DataBase.cpp.o.provides
-
-CMakeFiles/DataBase.dir/src/DataBase.cpp.o.provides.build: CMakeFiles/DataBase.dir/src/DataBase.cpp.o
-
 CMakeFiles/DataBase.dir/src/main.cpp.o: CMakeFiles/DataBase.dir/flags.make
 CMakeFiles/DataBase.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/mysql-connector/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/mysql-connector/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DataBase.dir/src/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DataBase.dir/src/main.cpp.o -c /root/mysql-connector/src/main.cpp
 
@@ -100,15 +77,14 @@ CMakeFiles/DataBase.dir/src/main.cpp.o.provides.build: CMakeFiles/DataBase.dir/s
 
 # Object files for target DataBase
 DataBase_OBJECTS = \
-"CMakeFiles/DataBase.dir/src/DataBase.cpp.o" \
 "CMakeFiles/DataBase.dir/src/main.cpp.o"
 
 # External object files for target DataBase
 DataBase_EXTERNAL_OBJECTS =
 
-../bin/DataBase: CMakeFiles/DataBase.dir/src/DataBase.cpp.o
 ../bin/DataBase: CMakeFiles/DataBase.dir/src/main.cpp.o
 ../bin/DataBase: CMakeFiles/DataBase.dir/build.make
+../bin/DataBase: ../bin/libtest.so.1.2
 ../bin/DataBase: CMakeFiles/DataBase.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin/DataBase"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DataBase.dir/link.txt --verbose=$(VERBOSE)
@@ -117,7 +93,6 @@ DataBase_EXTERNAL_OBJECTS =
 CMakeFiles/DataBase.dir/build: ../bin/DataBase
 .PHONY : CMakeFiles/DataBase.dir/build
 
-CMakeFiles/DataBase.dir/requires: CMakeFiles/DataBase.dir/src/DataBase.cpp.o.requires
 CMakeFiles/DataBase.dir/requires: CMakeFiles/DataBase.dir/src/main.cpp.o.requires
 .PHONY : CMakeFiles/DataBase.dir/requires
 

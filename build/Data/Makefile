@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/mysql-connector/build/CMakeFiles /root/mysql-connector/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /root/mysql-connector/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/mysql-connector/build/CMakeFiles /root/mysql-connector/build/Data/CMakeFiles/progress.marks
+	cd /root/mysql-connector/build && $(MAKE) -f CMakeFiles/Makefile2 Data/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/mysql-connector/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /root/mysql-connector/build && $(MAKE) -f CMakeFiles/Makefile2 Data/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,68 +88,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /root/mysql-connector/build && $(MAKE) -f CMakeFiles/Makefile2 Data/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /root/mysql-connector/build && $(MAKE) -f CMakeFiles/Makefile2 Data/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/mysql-connector/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named DataBase
+# Convenience name for target.
+Data/CMakeFiles/test.dir/rule:
+	cd /root/mysql-connector/build && $(MAKE) -f CMakeFiles/Makefile2 Data/CMakeFiles/test.dir/rule
+.PHONY : Data/CMakeFiles/test.dir/rule
 
-# Build rule for target.
-DataBase: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DataBase
-.PHONY : DataBase
-
-# fast build rule for target.
-DataBase/fast:
-	$(MAKE) -f CMakeFiles/DataBase.dir/build.make CMakeFiles/DataBase.dir/build
-.PHONY : DataBase/fast
-
-#=============================================================================
-# Target rules for targets named test
-
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
+# Convenience name for target.
+test: Data/CMakeFiles/test.dir/rule
 .PHONY : test
 
 # fast build rule for target.
 test/fast:
-	$(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/build
+	cd /root/mysql-connector/build && $(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+DataBase.o: DataBase.cpp.o
+.PHONY : DataBase.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/DataBase.dir/build.make CMakeFiles/DataBase.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+DataBase.cpp.o:
+	cd /root/mysql-connector/build && $(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/DataBase.cpp.o
+.PHONY : DataBase.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+DataBase.i: DataBase.cpp.i
+.PHONY : DataBase.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/DataBase.dir/build.make CMakeFiles/DataBase.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+DataBase.cpp.i:
+	cd /root/mysql-connector/build && $(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/DataBase.cpp.i
+.PHONY : DataBase.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+DataBase.s: DataBase.cpp.s
+.PHONY : DataBase.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/DataBase.dir/build.make CMakeFiles/DataBase.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+DataBase.cpp.s:
+	cd /root/mysql-connector/build && $(MAKE) -f Data/CMakeFiles/test.dir/build.make Data/CMakeFiles/test.dir/DataBase.cpp.s
+.PHONY : DataBase.cpp.s
 
 # Help Target
 help:
@@ -157,13 +145,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... DataBase"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... DataBase.o"
+	@echo "... DataBase.i"
+	@echo "... DataBase.s"
 .PHONY : help
 
 
@@ -175,6 +162,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/mysql-connector/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
